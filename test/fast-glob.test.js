@@ -8,6 +8,13 @@ describe('test fast-glob adapter', async () => {
     expect(res).toHaveLength(2);
   });
 
+  it('should read async with folder', async () => {
+    const glob = adapter('fast-glob');
+    const res = await glob.read('test');
+
+    expect(res).toHaveLength(2);
+  });
+
   it('should readSync', () => {
     const glob = adapter('fast-glob');
     const res = glob.readSync('./test/*.js');

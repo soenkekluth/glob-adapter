@@ -1,4 +1,24 @@
+const fs = require('fs');
+const path = require('path');
+const isGlob = require('is-glob');
+
 const regex = /,?[\s]+/g;
+
+const isDir = dirpath => {
+  try {
+    return fs.statSync(path.resolve(dirpath)).isDirectory();
+  } catch (err) {
+    return false;
+  }
+};
+
+const isFile = dirpath => {
+  try {
+    return fs.statSync(dirpath).isFile();
+  } catch (err) {
+    return false;
+  }
+};
 
 const appendWildcard = q => {
   let nq = q;
@@ -6,13 +26,21 @@ const appendWildcard = q => {
   return nq;
 };
 
-const parse = (globString, wildcard = false) =>  {
+const appendSlash = q => {
+  let nq = q;
+  if (isDir(nq)) {
+    nq = q.charAt(q.length - 1).match(/[^/]/) ? q + '/*' : q;
+  }
+  return nq;
+};
+
+const parse = (globString, slash = true) => {
   const res = globString.split(regex);
-  if(wildcard){
-    return res.map(i => appendWildcard(i));
+  if (slash) {
+    return res.map(i => appendSlash(i));
   }
   return res;
-}
+};
 
 const filter = entries => {
   const result = {
@@ -21,28 +49,18 @@ const filter = entries => {
   };
   for (let i = 0, l = entries.length; i < l; i++) {
     const e = entries[i];
-    (e.indexOf('!') === 0 && result.exclude.push(e.substr(1))) ||
-      result.include.push(e);
+    (e.indexOf('!') === 0 && result.exclude.push(e.substr(1))) || result.include.push(e);
   }
   return result;
 };
 
-function to(promise, errorExt) {
-  return promise
-      .then(function (data) { return [null, data]; })
-      .catch(function (err) {
-      if (errorExt) {
-          Object.assign(err, errorExt);
-      }
-      return [err, undefined];
-  });
-}
-
-
 module.exports = {
-  to:to,
-  regex:regex,
-  parse: parse,
-  filter: filter
+  isDir,
+  isFile,
+  isGlob,
+  appendSlash,
+  regex,
+  parse,
+  filter,
 };
 //.map(entry => appendWildcard(entry))
