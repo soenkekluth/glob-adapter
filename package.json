@@ -1,0 +1,32 @@
+{
+  "name": "glob-adapter",
+  "version": "1.0.0",
+  "description": "same interface for different glob implementations",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --config 'node_modules/eslint-scripts-sk/config/jestrc.json' --rootDir './' --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soenkekluth/glob-adapter.git"
+  },
+  "keywords": [],
+  "author": "Sönke Kluth <mail@soenkekluth.com> (https://soenkekluth.com)",
+  "license": "ISC",
+  "engines": {
+    "node": ">9"
+  },
+  "bugs": {
+    "url": "https://github.com/soenkekluth/glob-adapter/issues"
+  },
+  "homepage": "https://github.com/soenkekluth/glob-adapter#readme",
+  "dependencies": {
+    "fast-glob": "^2.2.0",
+    "glob-fs": "^0.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-sk-node": "^0.6.3",
+    "jest": "^22.4.3"
+  }
+}
