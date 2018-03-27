@@ -16,6 +16,9 @@
   "engines": {
     "node": ">9"
   },
+  "files": [
+    "src"
+  ],
   "bugs": {
     "url": "https://github.com/soenkekluth/glob-adapter/issues"
   },
