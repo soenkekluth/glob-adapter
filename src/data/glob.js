@@ -6,7 +6,7 @@ class Glob {
     this.props = Object.assign({}, defaults, props);
     this.glob = glob;
 
-    let entries = parse(this.glob);
+    let entries = parse(this.glob, true);
 
     if (this.props.exclude.map) {
       entries = entries.concat(this.props.exclude.map(e => '!' + e));

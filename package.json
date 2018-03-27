@@ -1,6 +1,6 @@
 {
   "name": "glob-adapter",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "same interface for different glob implementations",
   "main": "src/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "Sönke Kluth <mail@soenkekluth.com> (https://soenkekluth.com)",
   "license": "ISC",
   "engines": {
-    "node": ">9"
+    "node": ">=9.x.x"
   },
   "files": [
     "src"
