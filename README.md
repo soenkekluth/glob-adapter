@@ -1,4 +1,6 @@
 # glob-adapter
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/soenkekluth/glob-adapter.svg)](https://greenkeeper.io/)
 same interface for different glob implementations
 
 
