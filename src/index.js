@@ -1,8 +1,6 @@
 const Glob = require('./data/glob');
 const create = require('./adapter/create');
 
-// const defaults = require('./defaults');
-
 class GlobAdapter {
   constructor(id) {
     this.engine = create(id);

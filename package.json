@@ -4,7 +4,11 @@
   "description": "same interface for different glob implementations",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --config 'node_modules/eslint-scripts-sk/config/jestrc.json' --rootDir './' --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "test2": "jest --verbose --coverage",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
+    "test:watch": "jest --verbose --watch",
+    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -13,12 +17,21 @@
   "keywords": [],
   "author": "Sönke Kluth <mail@soenkekluth.com> (https://soenkekluth.com)",
   "license": "ISC",
+  "jest": {
+    "preset": "/Users/soenke/Developer/Workspaces/Github/eslint-configs/packages/eslint-scripts-sk/configs/jest.json",
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
   "engines": {
     "node": ">=9.x.x"
   },
-  "files": [
-    "src"
-  ],
+  "files": ["src"],
   "bugs": {
     "url": "https://github.com/soenkekluth/glob-adapter/issues"
   },

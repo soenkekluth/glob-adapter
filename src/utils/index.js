@@ -20,11 +20,11 @@ const isFile = dirpath => {
   }
 };
 
-const appendWildcard = q => {
-  let nq = q;
-  nq = q.charAt(q.length - 1).match(/[^*]/) ? q + '*' : q;
-  return nq;
-};
+// const appendWildcard = q => {
+//   let nq = q;
+//   nq = q.charAt(q.length - 1).match(/[^*]/) ? q + '*' : q;
+//   return nq;
+// };
 
 const appendSlash = q => {
   let nq = q;
@@ -34,7 +34,7 @@ const appendSlash = q => {
   return nq;
 };
 
-const parse = (globString, slash = true) => {
+const parse = (globString, { slash = true }) => {
   const res = globString.split(regex);
   if (slash) {
     return res.map(i => appendSlash(i));
