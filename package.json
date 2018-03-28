@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "test2": "jest --verbose --coverage",
     "test:update": "jest --verbose --coverage --updateSnapshot",
     "test:watch": "jest --verbose --watch",
     "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
@@ -16,9 +15,9 @@
   },
   "keywords": [],
   "author": "Sönke Kluth <mail@soenkekluth.com> (https://soenkekluth.com)",
-  "license": "ISC",
+  "license": "MIT",
   "jest": {
-    "preset": "/Users/soenke/Developer/Workspaces/Github/eslint-configs/packages/eslint-scripts-sk/configs/jest.json",
+    "preset": "node_modules/eslint-scripts-sk/configs/jest.json",
     "coverageThreshold": {
       "global": {
         "branches": 50,
