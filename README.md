@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/soenkekluth/glob-adapter.svg?branch=master)](https://travis-ci.org/soenkekluth/glob-adapter)
+
 # glob-adapter
 same interface for different glob implementations
 
