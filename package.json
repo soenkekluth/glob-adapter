@@ -17,20 +17,15 @@
   "author": "Sönke Kluth <mail@soenkekluth.com> (https://soenkekluth.com)",
   "license": "MIT",
   "jest": {
-    "preset": "node_modules/eslint-scripts-sk/configs/jest.json",
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      }
-    }
+    "preset": "jest-preset-sk",
+    "rootDir": "./"
   },
   "engines": {
     "node": ">=9.x.x"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "bugs": {
     "url": "https://github.com/soenkekluth/glob-adapter/issues"
   },
@@ -43,6 +38,7 @@
   "devDependencies": {
     "eslint": "4.19.1",
     "eslint-config-sk-node": "1.0.1",
-    "jest": "22.4.3"
+    "jest": "22.4.3",
+    "jest-preset-sk": "^1.0.3"
   }
 }
