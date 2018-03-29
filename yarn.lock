@@ -1986,9 +1986,9 @@ eslint-config-prettier@^2.9.0:
   dependencies:
     get-stdin "^5.0.1"
 
-eslint-config-sk-common@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.npmjs.org/eslint-config-sk-common/-/eslint-config-sk-common-0.6.3.tgz#532dff941e374b92a41bddc8ff30f5c669a51cc4"
+eslint-config-sk-common@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-sk-common/-/eslint-config-sk-common-1.0.0.tgz#e2ad0f987c83bbd3ca7eff86fb5a6ee2e072ddf4"
   dependencies:
     babel-eslint "^8.2.2"
     eslint "^4.19.1"
@@ -1997,18 +1997,21 @@ eslint-config-sk-common@^0.6.3:
     eslint-plugin-import "^2.9.0"
     eslint-plugin-jest "^21.15.0"
     eslint-plugin-prettier "^2.6.0"
+    eslint-plugin-promise "^3.7.0"
     eslint-plugin-sort-class-members "^1.3.0"
-    eslint-scripts-sk "^0.6.2"
+    eslint-scripts-sk "1.0.0"
+    jest-preset-sk "^1.0.3"
     jscodeshift "^0.5.0"
     prettier "^1.11.1"
     sort-class-members-codemod "0.5.1"
 
-eslint-config-sk-node@0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-sk-node/-/eslint-config-sk-node-0.6.3.tgz#8cd8adab24e1d141ecf775bf6434bbac96ac27e6"
+eslint-config-sk-node@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-sk-node/-/eslint-config-sk-node-1.0.1.tgz#da75db04084a0175a1825a6197357fa51febbcf2"
   dependencies:
-    eslint-config-sk-common "^0.6.3"
+    eslint-config-sk-common "1.0.0"
     eslint-plugin-node "^6.0.1"
+    jest-preset-sk "^1.0.3"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -2069,6 +2072,10 @@ eslint-plugin-prettier@^2.6.0:
     fast-diff "^1.1.1"
     jest-docblock "^21.0.0"
 
+eslint-plugin-promise@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.7.0.tgz#f4bde5c2c77cdd69557a8f69a24d1ad3cfc9e67e"
+
 eslint-plugin-sort-class-members@^1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.3.0.tgz#8a3db9afb84351f06fe3d1622abcafa1e5781694"
@@ -2080,11 +2087,12 @@ eslint-scope@^3.7.1, eslint-scope@~3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-scripts-sk@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.npmjs.org/eslint-scripts-sk/-/eslint-scripts-sk-0.6.2.tgz#b6ba805b2a3d41162c4b5d98b762d4d29ad5b41d"
+eslint-scripts-sk@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-scripts-sk/-/eslint-scripts-sk-1.0.0.tgz#1acfc861914c1efa7c9d6c92f21613b34ac1a412"
   dependencies:
     eslint-plugin-sort-class-members "^1.3.0"
+    jest-preset-sk "^1.0.3"
     sort-class-members-codemod "^0.5.1"
 
 eslint-visitor-keys@^1.0.0:
@@ -3767,6 +3775,10 @@ jest-mock@^13.2.2:
 jest-mock@^22.4.3:
   version "22.4.3"
   resolved "https://registry.npmjs.org/jest-mock/-/jest-mock-22.4.3.tgz#f63ba2f07a1511772cdc7979733397df770aabc7"
+
+jest-preset-sk@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jest-preset-sk/-/jest-preset-sk-1.0.3.tgz#c92840187a0885df8c192a2160877dbf42745bc9"
 
 jest-regex-util@^22.4.3:
   version "22.4.3"
